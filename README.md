@@ -25,7 +25,7 @@ You can generate wallet from mnemonic by using [hash_pbkdf2](http://php.net/manu
 $mnemonic = "obvious clerk essence hurry jar love recipe tenant belt sunset tiny reduce";
 $iterations = 1000;
 $salt = 'My secret password';
-$privateKey = hash_pbkdf2('sha256', $mnemonic, $salt, 1000, 64, false);
+$privateKey = hash_pbkdf2('sha256', $mnemonic, $salt, $iterations, 64, false);
 $wallet = genwallet($privateKey);
 echo $wallet;
 ```
